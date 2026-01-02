@@ -1,0 +1,285 @@
+@import "tailwindcss";
+
+/* ===== THE REVERSE TUTOR - CYBERPUNK THEME ===== */
+
+@theme {
+  /* Color Palette */
+  --color-void: #0a0a0a;
+  --color-abyss: #0f0f0f;
+  --color-steel: #1a1a1a;
+  --color-smoke: #2a2a2a;
+  --color-ash: #888888;
+  --color-bone: #cccccc;
+  --color-white: #f0f0f0;
+
+  /* Accent Colors */
+  --color-neon-cyan: #00ffd5;
+  --color-neon-magenta: #ff00ff;
+  --color-neon-blue: #00aaff;
+  --color-error: #ff4444;
+  --color-success: #44ff44;
+  --color-warning: #ffaa00;
+
+  /* Typography */
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Animation */
+  --animate-pulse-slow: pulse-slow 3s ease-in-out infinite;
+  --animate-glow: glow 2s ease-in-out infinite;
+  --animate-scan: scan 2s linear infinite;
+}
+
+/* Animations */
+@keyframes pulse-slow {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 20px var(--color-neon-cyan), 0 0 40px var(--color-neon-cyan);
+    opacity: 1;
+  }
+
+  50% {
+    box-shadow: 0 0 30px var(--color-neon-cyan), 0 0 60px var(--color-neon-cyan);
+    opacity: 0.8;
+  }
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes waveform {
+
+  0%,
+  100% {
+    height: 20%;
+  }
+
+  50% {
+    height: 80%;
+  }
+}
+
+/* Base Styles */
+html {
+  background-color: var(--color-void);
+  color: var(--color-white);
+}
+
+body {
+  font-family: var(--font-mono);
+  background: var(--color-void);
+  background-image:
+    radial-gradient(ellipse at top, var(--color-abyss) 0%, transparent 50%),
+    radial-gradient(circle at 80% 60%, rgba(0, 255, 213, 0.03) 0%, transparent 30%);
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-abyss);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-smoke);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-ash);
+}
+
+/* Selection */
+::selection {
+  background: var(--color-neon-cyan);
+  color: var(--color-void);
+}
+
+/* Utility Classes */
+.text-glow {
+  text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+}
+
+.border-glow {
+  box-shadow: 0 0 10px var(--color-neon-cyan), inset 0 0 10px rgba(0, 255, 213, 0.1);
+}
+
+.glass {
+  background: rgba(15, 15, 15, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--color-neon-cyan);
+  outline-offset: 2px;
+}
+
+
+
+/* Fluid Morph Animations */
+@keyframes morph-slow {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes morph-fast {
+  0% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  33% {
+    border-radius: 50% 30% 20% 80% / 40% 70% 30% 50%;
+  }
+
+  66% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+/* Fluid Gradients */
+.fluid-blue {
+  background: linear-gradient(135deg, rgba(0, 170, 255, 0.8), rgba(0, 255, 213, 0.6));
+}
+
+.fluid-green {
+  background: linear-gradient(135deg, rgba(68, 255, 68, 0.8), rgba(0, 255, 170, 0.6));
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(5px) rotate(-360deg);
+  }
+}
+
+@keyframes float-random {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(10px, -10px);
+  }
+
+  50% {
+    transform: translate(-5px, 5px);
+  }
+
+  75% {
+    transform: translate(-10px, -5px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+
+/* FORCED Light Theme Overrides - High Specificity */
+html[data-theme="light"] {
+  --color-void: #ffffff;
+  /* Pure White Background */
+  --color-abyss: #f8fafc;
+  /* Very light grey for depth */
+  --color-steel: #e2e8f0;
+  /* Light borders */
+  --color-smoke: #cbd5e1;
+  --color-ash: #64748b;
+  --color-bone: #475569;
+  --color-white: #000000;
+  /* Pure Black Text */
+
+  /* Update accents for light mode visibility */
+  --color-neon-cyan: #0088cc;
+  --color-neon-magenta: #c026d3;
+  --color-neon-blue: #2563eb;
+}
+
+/* Global Transition */
+body,
+div,
+p,
+h1,
+h2,
+h3,
+button {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

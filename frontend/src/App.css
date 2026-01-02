@@ -1,0 +1,67 @@
+/* App-specific styles */
+
+.bg-void {
+  background-color: #0a0a0a;
+}
+
+.bg-abyss {
+  background-color: #0f0f0f;
+}
+
+.bg-steel {
+  background-color: #1a1a1a;
+}
+
+.bg-smoke {
+  background-color: #2a2a2a;
+}
+
+.text-ash {
+  color: #888888;
+}
+
+.text-bone {
+  color: #cccccc;
+}
+
+.bg-neon-cyan {
+  background-color: #00ffd5;
+}
+
+.text-neon-cyan {
+  color: #00ffd5;
+}
+
+.border-neon-cyan {
+  border-color: #00ffd5;
+}
+
+.bg-neon-magenta {
+  background-color: #ff00ff;
+}
+
+.text-neon-magenta {
+  color: #ff00ff;
+}
+
+.text-error {
+  color: #ff4444;
+}
+
+.text-success {
+  color: #44ff44;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(400%);
+  }
+}
+
+.animate-scan {
+  animation: scan 4s linear infinite;
+}

@@ -6,7 +6,7 @@ The Reverse Tutor is an AI-powered pedagogical assistant designed to implement t
 
 ## Demo (Video)
 
-<video src="./TheReverseTutorDemo.mp4" controls width="720"></video>
+- Watch the demo: [TheReverseTutorDemo.mp4](TheReverseTutorDemo.mp4) (if GitHub preview does not play, download the file and view locally).
 
 The demo captures the AI model speaking in response to a human prompt: "Artificial Intelligence and Machine Learning are a result of availability of data, advancement in algorithms, and hardware advancements like GPU." The clip showcases the full voice pipeline (STT → reasoning → TTS) running end to end.
 

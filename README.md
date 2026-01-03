@@ -4,6 +4,12 @@
 
 The Reverse Tutor is an AI-powered pedagogical assistant designed to implement the Feynman Technique through interactive Socratic dialogue. Unlike traditional educational tools that provide direct answers, this system acts as a knowledgeable adversary, challenging users to articulate their understanding of complex concepts. By probing for gaps in knowledge and asking recursive "why" questions, the system fosters deep conceptual mastery and active recall.
 
+## Demo (Video)
+
+<video src="./TheReverseTutorDemo.mp4" controls width="720"></video>
+
+The demo captures the AI model speaking in response to a human prompt: "Artificial Intelligence and Machine Learning are a result of availability of data, advancement in algorithms, and hardware advancements like GPU." The clip showcases the full voice pipeline (STT → reasoning → TTS) running end to end.
+
 ## System Architecture
 
 The application requires a seamless real-time interaction model effectively implemented through a decoupled client-server architecture.
